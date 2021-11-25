@@ -1,5 +1,4 @@
 
-
 <div class="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5">
     <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" >
         <div class="md:flex w-full">
@@ -54,6 +53,9 @@
                              <input id="btnIngresar" type="submit" (click)="register()" name="submit" class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold" value="REGISTRARSE">
                         </div>
                     </div>
+                    <p class="text-center font-semibold">¿Ya tienes cuenta?</p>
+                    <h6 class="text-md font-semibold mt-4 text-center text-blue-700" [routerLink]="['/login']">Iniciar Sesión</h6>
+                    <h6 class="text-sm mt-6 text-center text-gray-600" [routerLink]="['/inicio']">Volver al inicio</h6>
                 </div>
             </div>
         </div>

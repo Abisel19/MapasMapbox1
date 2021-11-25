@@ -15,9 +15,9 @@ export class MapCustomService {
   mapbox = (mapboxgl as typeof mapboxgl);
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/streets-v11';
-  lat = 40.416906;
-  lng = -3.7056721;
-  zoom = 3;
+  lat = 21.1500687;
+  lng = -86.8014868;
+  zoom = 11;
   wayPoints: Array<any> = [];
   markerDriver: any = null;
 

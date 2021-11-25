@@ -115,8 +115,6 @@ export class MapCustomService {
       this.socket.emit('find-driver', {points: route});
 
     });
-
-
   }
 
   addMarkerCustom(coords): void {

@@ -25,10 +25,10 @@ const routes: Routes = [
     path: 'inicio',component: InicioComponent, 
   },
   {
-    path: 'ruta',component: RutaComponent, canActivate: [AuthGuard]
+    path: 'ruta',component: RutaComponent
   },
   {
-    path: 'principal',component: PrincipalComponent,canActivate: [AuthGuard]
+    path: 'principal',component: PrincipalComponent
   },
   {
     path: '',

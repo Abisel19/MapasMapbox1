@@ -23,8 +23,6 @@ export class RutaComponent implements OnInit {
         this.renderer2.appendChild(this.asGeoCoder.nativeElement,
           geocoder.onAdd(map)
         );
-
-
         console.log('*** TODO BIEN *****');
       })
       .catch((err) => {
