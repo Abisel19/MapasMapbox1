@@ -1,21 +1,46 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {SocketIoConfig, SocketIoModule} from "ngx-socket-io";
+import { HomeComponent } from './components/home/home.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { PrincipalComponent } from './components/principal/principal.component';
+import { NavComponent } from './components/nav/nav.component';
+import { RutaComponent } from './components/ruta/ruta.component';
+import { AppRoutingModule } from './app-routing.module';
+import{FormsModule, ReactiveFormsModule,FormBuilder,
+  FormGroup,
+  FormArray,
+  FormControl,
+  ValidatorFn} from '@angular/forms';
+  
 
 
 const config: SocketIoConfig = {url: 'http://localhost:3000', options: {}};
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    InicioComponent,
+    LoginComponent,
+    RegisterComponent,
+    PrincipalComponent,
+    NavComponent,
+    RutaComponent
   ],
   imports: [
     HttpClientModule,
     SocketIoModule.forRoot(config),
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,ReactiveFormsModule,
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyDIaqljkZH92Pu1uE3tfTD0TLQlwHO43iI'
+    // })
   ],
   providers: [],
   bootstrap: [AppComponent]
