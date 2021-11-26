@@ -30,6 +30,7 @@ export class InicioComponent implements OnInit {
         this.locationService.getPosition().then(pos => {
           this.lat = pos.lat;
           this.lng = pos.lng;
+          this.mapCustomService.addMarkerCustom([this.lng, this.lat]);
           this.map = new mapboxgl.Map({
           container: 'map',
           zoom: this.zoom,
@@ -42,6 +43,9 @@ export class InicioComponent implements OnInit {
       }
     });
   }
+  
+  
+
 
 
 }

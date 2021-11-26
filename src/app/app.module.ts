@@ -16,6 +16,8 @@ import{FormsModule, ReactiveFormsModule,FormBuilder,
   FormArray,
   FormControl,
   ValidatorFn} from '@angular/forms';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { FooterComponent } from './components/footer/footer.component';
   
 
 
@@ -30,7 +32,9 @@ const config: SocketIoConfig = {url: 'http://localhost:3000', options: {}};
     RegisterComponent,
     PrincipalComponent,
     NavComponent,
-    RutaComponent
+    RutaComponent,
+    PerfilComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,
