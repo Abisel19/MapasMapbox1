@@ -11,6 +11,7 @@ export class AuthService {
   isAuthenticated: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   cieoMs: any;
   estado: boolean | undefined;
+  public token: string;
 
   constructor(public http:HttpClient,private router: Router) {
     this.obtenerToken();
@@ -55,6 +56,16 @@ export class AuthService {
   }
   return this.estado;
 
+  }
+  retornarToken(){
+    if(JSON.parse(localStorage.getItem('currentToken'))){
+    var currentToken = JSON.parse(localStorage.getItem('currentToken'));
+    this.token = currentToken.token; // your token 
+    //console.log(this.token);  
+    }else{
+      //console.log("No hay token");
+    }
+    return this.token;
   }
   registro(usuario: User){
     this.http.post<User>('http://localhost:8000/api/register',usuario).subscribe(data=>{
