@@ -19,7 +19,7 @@ import{FormsModule, ReactiveFormsModule,FormBuilder,
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { FooterComponent } from './components/footer/footer.component';
   
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const config: SocketIoConfig = {url: 'http://localhost:3000', options: {}};
 
@@ -44,9 +44,9 @@ const config: SocketIoConfig = {url: 'http://localhost:3000', options: {}};
     FormsModule,ReactiveFormsModule,
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyDIaqljkZH92Pu1uE3tfTD0TLQlwHO43iI'
-    // })
+    // })s
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
