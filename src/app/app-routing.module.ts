@@ -23,25 +23,25 @@ const routes: Routes = [
     path: 'home',component: HomeComponent,canActivate: [AuthGuard]
   },
   {
-    path: 'inicio',component: InicioComponent, 
+    path: '/',component: InicioComponent, 
   },
   {
-    path: 'ruta',component: RutaComponent
+    path: 'ruta',component: RutaComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'principal',component: PrincipalComponent
+    path: 'principal',component: PrincipalComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'perfil',component: PerfilComponent, 
+    path: 'perfil',component: PerfilComponent, canActivate: [AuthGuard]
   },
   {
     path: '',
-    redirectTo: '/inicio',
+    redirectTo: '/',
     pathMatch: 'full'
   },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

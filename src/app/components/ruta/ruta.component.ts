@@ -14,7 +14,7 @@ export class RutaComponent implements OnInit {
   @ViewChild('asGeoCoder') asGeoCoder: ElementRef;
   modeInput = 'start';
   wayPoints: WayPoints = {start: null, end: null};
-  lista:string[]=["Hola","bbbb","tal", "estas"];
+  lista:string[]=["Las americas","bbb","tal", "estas"];
   seleccionado:string[]=[];
   public token: string;
   httpOptions = {
